@@ -10,8 +10,13 @@ remove("Hi! Hi!") === "Hi! Hi"
 remove("Hi") === "Hi"
 */
 
-function remove(s){
-  //coding and coding....
+const remove = (s) => {
+  let newStr = '';
+  for(let i = 0; i < s.length; i++) {
+    if(s[i] !== '!') {
+      newStr += s[i];
+    }
+  }
   
-  
+  return newStr;
 }
