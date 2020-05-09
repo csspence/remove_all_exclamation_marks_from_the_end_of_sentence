@@ -12,11 +12,14 @@ remove("Hi") === "Hi"
 
 const remove = (s) => {
   let newStr = '';
-  for(let i = 0; i < s.length; i++) {
-    if(s[i] !== '!') {
-      newStr += s[i];
+  const last = s.length - 1;
+  for(let i = last; i > 0; i--) {
+    if(s[i] === '!') {
+      continue;
+    } else {
+      newStr = s.slice(0,(i + 1));
+      break;
     }
   }
-  
   return newStr;
 }
